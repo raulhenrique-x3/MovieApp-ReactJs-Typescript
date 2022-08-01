@@ -1,0 +1,110 @@
+.section01 {
+    width: 100%;
+    height: 100%;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.figureMovie {
+    text-align: center;
+    width: 20%;
+    height: 85vh;
+    background-color: #fff;
+    border-bottom: none;
+}
+
+.movieImgRelease {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border: 2px solid #91a2b0;
+    aspect-ratio: 2/3;
+}
+
+.movieImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieImgRelease>p {
+    color: #293845;
+    position: absolute;
+    z-index: 1;
+    font-weight: 500;
+    bottom: 5px;
+}
+
+.movieInfo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    border: 3px solid #c3cfd9;
+    border-bottom: none;
+    border-top: none;
+}
+
+.movieInfo>h4{
+    font-weight: 600;
+}
+
+
+.movieInfo {
+    padding: 8px 16px;
+    color: #293845;
+}
+
+.movieRate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.movieAvg {
+    font-size: 16px;
+}
+
+.movieVote {
+    font-size: 14px;
+}
+
+.heart-fill{
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 8px;
+    color: #4b5c6b;
+}
+
+.heart-fill:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 620px){
+    .movies{
+        flex-direction: column;
+        flex-wrap: unset;
+        align-items: center;
+        height: 100%;
+        gap: unset;
+    }
+
+    .figureMovie{
+        width: 200px;
+        height: 500px;
+    }
+}

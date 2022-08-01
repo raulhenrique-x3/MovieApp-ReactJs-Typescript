@@ -1,0 +1,272 @@
+.sectionForm {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.formContent {
+    width: 50%;
+    height: auto;
+
+}
+
+.finalForm {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 200px;
+}
+
+.inputLabel {
+    margin-top: 110px;
+}
+
+
+label>p {
+    font-size: 2rem;
+}
+
+.fullInput,
+.cpfInput,
+.celInput,
+.cepInput,
+.addressInput,
+.cityInput,
+.stateInput {
+    padding: 12px;
+    border: 2px solid #73737373;
+    border-radius: 3px;
+    margin-top: 32px;
+}
+
+.cpfInput,
+.cityInput {
+    margin-right: 8px;
+}
+
+.cepInput {
+    width: 150px;
+    margin-right: 8px;
+}
+
+.spanHalf {
+    width: 100%;
+}
+
+.addressInput {
+    width: 370px;
+}
+
+
+.fullInput {
+    width: 100%;
+}
+
+.inputHalf {
+    width: 100%;
+    display: flex;
+}
+
+input::placeholder {
+    color: #c3cfd9;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.buyContent {
+    width: auto;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buyedItems {
+    width: 100%;
+    height: 45vh;
+}
+
+.buyTitle {
+    width: 100%;
+    display: flex;
+}
+
+.imgName {
+    display: flex;
+    gap: 36px;
+    width: 50%;
+}
+
+.qtdPrice {
+    display: flex;
+    width: 50%;
+    gap: 135px;
+}
+
+.imgName>p,
+.qtdPrice>p {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.buyedMovieInfo {
+    width: 100%;
+}
+
+.selectedMovie {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    border-bottom: 2.5px solid #4a4a4a85;
+}
+
+.imgMovieBuy {
+    height: 72px;
+}
+
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+
+}
+
+.totalText {
+    font-size: 1.5rem;
+}
+
+.totalValue {
+    font-size: 1.8rem;
+}
+
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #5f46ff;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 32px;
+}
+
+.testingBuy {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.spanP {
+    width: 10vw;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bi-trash3-fill {
+    cursor: pointer;
+}
+
+.modalCont {
+    width: 100%;
+    min-height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.hiddeModalCont {
+    display: none;
+    position: unset;
+}
+
+.modal {
+    width: 40%;
+    height: 40vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #4a4a4a85;
+    color: #1e2f3d;
+}
+
+.toHome {
+    width: 35vw;
+    padding: 12px;
+    border: none;
+    background-color: #5f46ff;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1012px) {
+
+    .sectionForm {
+        padding: 0 32px 0 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .formContent {
+        width: 100%;
+    }
+
+    .cpfInput {
+        width: 70%;
+    }
+
+    .celInput,
+    .stateInput {
+        width: 100%;
+    }
+
+    .cityInput {
+        width: 90%;
+    }
+
+    .buyContent {
+        display: flex;
+        width: 100%;
+        margin-top: 32px;
+    }
+
+    .testingBuy>span {
+        width: 20vw;
+    }
+
+    .modal {
+        width: 95%;
+    }
+
+    .modal>h1 {
+        font-size: 1.3rem;
+    }
+
+    .modal>h3 {
+        font-size: 1rem;
+    }
+
+    .toHome {
+        width: 85vw;
+    }
+
+}
