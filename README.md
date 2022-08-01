@@ -1,5 +1,5 @@
 Projeto atualizado para Typescript.
-Adicionei novas funcionalidades solicitadas:
+Adicionei algumas funcionalidades solicitadas:
 1. Filtro de pesquisa
 2. Adicionar favoritos para o carrinho de compra
 3. Tooltip nos icones de remover e add dos favoritos
