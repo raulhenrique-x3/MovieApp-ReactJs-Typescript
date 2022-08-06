@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import "../Form/form.css";
-import useCart from "../../hooks/useCart";
 import { Link } from "react-router-dom";
 import { Tooltip } from "../Tooltip/Tooltip";
-import { Trash } from "../Trash/Trash";
+import { CartTrash } from "../iconsComponent/CartTrash";
+import useCart from "../../hooks/useCart";
+import * as yup from "yup";
+import "../Form/form.css";
 
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
 
@@ -45,7 +45,7 @@ const schema = yup
 const Form = () => {
   // Remoção de item da seção Form
   const { cart, removeFromCart } = useCart();
-  const removeItemForm = (id: string) => {
+  const removeItemFromCart = (id: string) => {
     removeFromCart(id);
   };
 
@@ -59,7 +59,9 @@ const Form = () => {
   });
 
   // Submit das informações do Form
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = () => {
+    setmodalCont(true);
+  };
 
   // Cálculo dos produtos do carrinho
   const [totalSum, setTotalSum] = useState(0);
@@ -190,7 +192,7 @@ const Form = () => {
                         <p>R${item.price}</p>
                       </span>
                       <Tooltip direction="bottom" description="Remover do carrinho">
-                        <Trash removecart={removeFromCart}></Trash>
+                        <CartTrash removeitemfromcart={() => removeItemFromCart(item.id)} />{" "}
                       </Tooltip>
                     </div>
                   </div>
@@ -202,11 +204,9 @@ const Form = () => {
                 <p className="totalValue">R$ {totalSum.toFixed(2)}</p>
               </div>
 
-              <span onClick={() => setmodalCont(!modalCont)}>
-                <button onClick={() => handleSubmit(onSubmit)} className="submitButton" name="submit" type="submit">
-                  Finalizar
-                </button>
-              </span>
+              <button className="submitButton" name="submit" type="submit">
+                Finalizar
+              </button>
             </div>
           </div>
           <div className={modalCont ? "modalCont" : "hiddeModalCont"}>

@@ -1,3 +1,13 @@
+.showModall {
+    display: block;
+    width: 100%;
+    position: absolute;
+}
+
+.hiddenModall {
+    display: none;
+}
+
 .section01 {
     width: 100%;
     height: 100%;
@@ -56,7 +66,7 @@
     border-top: none;
 }
 
-.movieInfo>h4{
+.movieInfo>h4 {
     font-weight: 600;
 }
 
@@ -82,20 +92,20 @@
     font-size: 14px;
 }
 
-.heart-fill{
+.heart-fill {
     position: absolute;
     margin-left: 80%;
     margin-top: 8px;
     color: #4b5c6b;
 }
 
-.heart-fill:hover{
+.heart-fill:hover {
     color: #fff;
     cursor: pointer;
 }
 
-@media (max-width: 620px){
-    .movies{
+@media (max-width: 620px) {
+    .movies {
         flex-direction: column;
         flex-wrap: unset;
         align-items: center;
@@ -103,7 +113,7 @@
         gap: unset;
     }
 
-    .figureMovie{
+    .figureMovie {
         width: 200px;
         height: 500px;
     }

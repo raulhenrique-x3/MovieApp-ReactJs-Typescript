@@ -1,12 +1,12 @@
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
-import "../Section01/section01.css";
 import { Button } from "../Button/Button";
-import axios from "axios";
-import useFavorites from "../../hooks/useFavorites";
 import { IMovie } from "../../interfaces/movie.interface";
 import { formatDate } from "../../util/formatDate";
 import style from "../Search/search.module.scss";
+import axios from "axios";
+import useFavorites from "../../hooks/useFavorites";
+import "../Section01/section01.css";
 
 const API_KEY = "6837309d019c7c2ec27c9f29d7f960a4";
 const API_IMG = "https://image.tmdb.org/t/p/w500/";

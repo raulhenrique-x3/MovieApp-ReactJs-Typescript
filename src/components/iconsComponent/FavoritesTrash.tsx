@@ -1,15 +1,7 @@
-import useCart from "../../hooks/useCart";
-
-export const Trash = (item: any) => {
-  const { removeFromCart } = useCart();
-  const removeCart = (id: string) => {
-    console.log(id);
-    removeFromCart(id);
-  };
-
+export const FavoritesTrash = (props: any) => {
   return (
     <svg
-      onClick={() => removeCart(item.id)}
+      onClick={props.removeitemfromfav}
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"

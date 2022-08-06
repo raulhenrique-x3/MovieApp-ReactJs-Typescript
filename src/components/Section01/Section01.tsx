@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-import "../Section01/section01.css";
+import { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
-import axios from "axios";
-import useFavorites from "../../hooks/useFavorites";
 import { IMovie } from "../../interfaces/movie.interface";
 import { formatDate } from "../../util/formatDate";
+import { InfoMovie } from "../InfoMovie/InfoMovie";
+import "../Section01/section01.css";
+import axios from "axios";
+import useFavorites from "../../hooks/useFavorites";
 
 const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=6837309d019c7c2ec27c9f29d7f960a4";
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
@@ -22,11 +23,14 @@ export default function Section01() {
       });
   }, []);
 
+  // Adiciona filmes aos favoritos:
   const { updateFavorites } = useFavorites();
   const handleAddFav = (movie: IMovie) => {
-    console.log(movie.poster_path);
+    console.log(movie);
     updateFavorites("add", { id: movie?.id, qnt: 1, price: 79.99, title: movie?.title, img: movie?.poster_path });
   };
+
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className="section01">
@@ -70,10 +74,13 @@ export default function Section01() {
                 </div>
                 <p>R$79.99</p>
               </div>
-
               <Button txt="Adicionar" movie={movie} />
+              <button type="button" onClick={() => setShowModal(!showModal)}>
+                Clique
+              </button>
             </div>
           ))}
+        {showModal && <InfoMovie setShowModal={setShowModal} />}
       </div>
     </section>
   );

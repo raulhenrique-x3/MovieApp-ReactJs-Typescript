@@ -1,4 +1,3 @@
-import React from "react";
 import useCart from "../../hooks/useCart";
 import "../Button/button.css";
 
@@ -6,7 +5,6 @@ export const Button = (props: any) => {
   const { updateCart } = useCart();
 
   const handleAdd = () => {
-    console.log(props.movie);
     updateCart("add", {
       id: props?.movie?.id,
       qnt: 1,
@@ -14,6 +12,7 @@ export const Button = (props: any) => {
       title: props?.movie?.title,
       img: props?.movie?.poster_path,
     });
+    console.log(props.movie);
   };
 
   return (
