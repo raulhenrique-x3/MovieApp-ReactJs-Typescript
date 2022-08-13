@@ -1,5 +1,3 @@
-import useCart from "../../hooks/useCart";
-
 export const CartTrash = (props: any) => {
   return (
     <svg

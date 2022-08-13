@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { CartContext } from "../context/cartContext";
+import { ModalContext } from "../context/modalContext";
 
 //eslint-disable-next-line
 export default () => {
-  const context = useContext(CartContext);
+  const context = useContext(ModalContext);
   return context;
 };

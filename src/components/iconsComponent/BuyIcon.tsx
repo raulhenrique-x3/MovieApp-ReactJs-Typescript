@@ -1,24 +1,29 @@
 import useCart from "../../hooks/useCart";
+import { IMovie } from "../../interfaces/movie.interface";
 
-export const BuyFromFavs = (props: any) => {
+interface IProps {
+  movie: IMovie;
+}
+export const BuyIcon = (props: IProps) => {
   const { updateCart } = useCart();
 
-  const handleAddFromFavs = () => {
+  const handleAddToCart = () => {
     updateCart("add", {
       id: props?.movie?.id,
       qnt: 1,
       price: 79.99,
       title: props?.movie?.title,
-      img: props?.movie?.img,
+      img: props?.movie?.poster_path,
     });
+    console.log(props.movie);
   };
 
   return (
     <svg
-      onClick={() => handleAddFromFavs()}
+      onClick={() => handleAddToCart()}
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="32"
+      height="32"
       fill="currentColor"
       className="bi-cart-fill-fav"
       viewBox="0 0 16 16"

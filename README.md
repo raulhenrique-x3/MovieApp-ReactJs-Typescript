@@ -6,4 +6,4 @@ Adicionei algumas funcionalidades solicitadas:
 4. Ajustes no layout para deixar a interface mais próxima do mock
 
 Próximos objetivos:
-Componentizar essa aplicação para facilitar a leitura e navegação da mesma.
+Componentizar essa aplicação para facilitar a leitura e navegação na mesma.

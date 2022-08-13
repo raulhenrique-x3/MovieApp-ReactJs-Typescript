@@ -1,10 +1,12 @@
-.showModall {
-    display: block;
+.showModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     width: 100%;
-    position: absolute;
 }
 
-.hiddenModall {
+.hiddenModal {
     display: none;
 }
 
@@ -20,15 +22,15 @@
     width: 100%;
     height: 100vh;
     gap: 32px;
-    margin-top: 32px;
 }
 
 .figureMovie {
     text-align: center;
     width: 20%;
-    height: 85vh;
+    height: 65vh;
     background-color: #fff;
     border-bottom: none;
+    margin-top: 128px;
 }
 
 .movieImgRelease {
@@ -49,7 +51,6 @@
 .movieImgRelease>p {
     color: #293845;
     position: absolute;
-    z-index: 1;
     font-weight: 500;
     bottom: 5px;
 }
