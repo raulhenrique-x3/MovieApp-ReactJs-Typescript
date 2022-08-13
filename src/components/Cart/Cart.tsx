@@ -37,25 +37,28 @@ export const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="carInfo">
-      <div className="firstCarCont">
-        <h2>Meu carrinho</h2>
-        <p onClick={handleClearCart} className="empty">
-          Esvaziar
-        </p>
-      </div>
-      <div className="cartProducts">
-        {cart?.map((item) => (
-          <div className="cartItem" key={item.id}>
-            <img alt={item.title} className="imgCart" src={API_IMG + item.img} />
-            <p className="titleP">{item.title}</p>
-            <p>{item.qnt}</p>
-            <p>R${item.price}</p>
-            <Tooltip direction="bottom" description="Remover do carrinho">
-              <CartTrash removeitemfromcart={() => removeItemFromCart(item.id)} />
-            </Tooltip>
-          </div>
-        ))}
+    <>
+      {" "}
+      <div className="carInfo">
+        <div className="firstCarCont">
+          <h2>Meu carrinho</h2>
+          <p onClick={handleClearCart} className="empty">
+            Esvaziar
+          </p>
+        </div>
+        <div className="cartProducts">
+          {cart?.map((item) => (
+            <div className="cartItem" key={item.id}>
+              <img alt={item.title} className="imgCart" src={API_IMG + item.img} />
+              <p className="titleP">{item.title}</p>
+              <p>{item.qnt}</p>
+              <p>R${item.price}</p>
+              <Tooltip direction="bottom" description="Remover do carrinho">
+                <CartTrash removeitemfromcart={() => removeItemFromCart(item.id)} />
+              </Tooltip>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="finish">
         <div className="totalSum">
@@ -66,6 +69,6 @@ export const Cart = () => {
           Finalizar Compra
         </button>
       </div>
-    </div>
+    </>
   );
 };

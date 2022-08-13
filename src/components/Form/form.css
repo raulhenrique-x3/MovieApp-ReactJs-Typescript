@@ -216,57 +216,81 @@ input::placeholder {
     font-size: 1.2rem;
 }
 
-@media (max-width: 1012px) {
+@media (min-width: 320px) and (max-width: 1190px) {
 
     .sectionForm {
         padding: 0 32px 0 32px;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         height: 100%;
     }
 
-    .formContent {
-        width: 100%;
+    .finalForm {
+        gap: 120px;
+        flex-direction: column;
+        height: unset;
     }
 
-    .cpfInput {
-        width: 70%;
-    }
-
+    .fullInput,
+    .cpfInput,
     .celInput,
+    .cepInput,
+    .addressInput,
+    .cityInput,
     .stateInput {
-        width: 100%;
+        width: 80vw;
     }
 
-    .cityInput {
-        width: 90%;
+    .inputHalf {
+        flex-direction: column;
     }
 
-    .buyContent {
-        display: flex;
-        width: 100%;
-        margin-top: 32px;
+    .buyedItems {
+        width: 80vw;
+        height: unset;
     }
 
-    .testingBuy>span {
-        width: 20vw;
+    .imgName {
+        gap: 24px;
+        width: 60%;
+    }
+
+    .qtdPrice {
+        width: 10%;
+        gap: 16px;
+    }
+
+    .selectedMovie {
+        gap: 48px;
+    }
+
+    .testingBuy {
+        gap: 24px;
     }
 
     .modal {
-        width: 95%;
+        width: 100%;
+        margin-right: 64px;
     }
 
-    .modal>h1 {
-        font-size: 1.3rem;
+    .modal h1 {
+        font-size: 1.2rem;
     }
 
-    .modal>h3 {
-        font-size: 1rem;
+    .modal h3 {
+        font-size: 0.8rem;
     }
 
-    .toHome {
-        width: 85vw;
-    }
+}
 
+@media (min-width: 1044px) {
+    .finalForm {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 2560px) {
+    .finalForm {
+        gap: 200px;
+    }
 }

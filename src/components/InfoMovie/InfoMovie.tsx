@@ -23,6 +23,11 @@ export const InfoMovie = (props: IModalProps) => {
       <div className="Modal">
         {modal?.map((movieItem, li) => (
           <div className="modalMovieInfo" key={li}>
+            <span>
+              <button type="button" className="closeButton" onClick={() => props.onClose(false)}>
+                X
+              </button>
+            </span>
             <img src={API_IMG + movieItem.poster_path} className="modalBgMovieImg" alt={movieItem.title} />
             <div className="modalTotalInfos">
               <img src={API_IMG + movieItem.poster_path} className="modalMovieImg" alt={movieItem.title} />
@@ -53,11 +58,6 @@ export const InfoMovie = (props: IModalProps) => {
                 </span>
               </div>
             </div>
-            <span>
-              <button type="button" className="closeButton" onClick={() => props.onClose(false)}>
-                X
-              </button>
-            </span>
           </div>
         ))}
       </div>

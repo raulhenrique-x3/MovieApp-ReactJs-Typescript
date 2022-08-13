@@ -92,13 +92,12 @@ input:focus {
 
 .showBuyMenu {
     width: 25vw;
-    height: calc(100vh - 70px);
     position: fixed;
     top: 70px;
     right: 0;
     z-index: 99;
     background-color: #fff;
-
+    border: 2px solid #91a2b0;
 }
 
 .hiddeBuyMenu {
@@ -110,7 +109,6 @@ input:focus {
     width: 100%;
     height: 90vh;
     background-color: #fff;
-    border: 2px solid #91a2b0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -210,6 +208,7 @@ span {
     right: 0;
     z-index: 99;
     background-color: #fff;
+    border: 2px solid #91a2b0;
 }
 
 .bi-trash3-fill {
@@ -242,6 +241,39 @@ span {
 
     .cartItem {
         gap: unset;
-        padding: unset;
+        padding: 8px;
+    }
+
+
+    .cartItem p {
+        font-size: 0.6rem;
+        padding: 4px;
+        font-weight: 700;
+    }
+
+    .searchForm {
+        padding: 8px;
+    }
+
+    .inputSearch {
+        width: 100%;
+        height: 48px;
+    }
+
+    .headerIcons {
+        gap: 8px;
+    }
+
+    .carInfo {
+        height: 78vh;
+    }
+
+    .firstCarCont {
+        gap: 48px;
+        padding: 8px;
+    }
+
+    .firstCarCont h2 {
+        font-size: 1rem;
     }
 }

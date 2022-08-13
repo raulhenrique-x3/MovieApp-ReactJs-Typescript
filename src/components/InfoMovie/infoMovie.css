@@ -109,3 +109,36 @@
     gap: 16px;
     cursor: pointer;
 }
+
+@media (min-width: 320px) and (max-width: 1190px) {
+    .bgModal {
+        position: sticky;
+    }
+
+    .modalTotalInfos {
+        flex-direction: column;
+    }
+
+    .modalMovieInfo {
+        height: 75vh;
+    }
+
+    .movieInfos {
+        width: 100%;
+        gap: 8px;
+        height: unset;
+    }
+
+    .movieTitle {
+        font-size: 1.5rem;
+    }
+
+    .movieDesc {
+        font-size: 1rem;
+    }
+
+    .iconsSpan {
+        justify-content: center;
+        gap: 64px;
+    }
+}
