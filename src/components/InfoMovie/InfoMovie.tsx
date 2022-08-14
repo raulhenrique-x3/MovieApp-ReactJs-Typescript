@@ -1,14 +1,14 @@
-import { API_IMG } from "../../const/urls";
-import { IMovie } from "../../interfaces/movie.interface";
 import { formatDate } from "../../util/formatDate";
+import { API_IMG } from "../../const/urls";
+import { BuyIcon } from "../iconsComponent/BuyIcon";
+import { Tooltip } from "../Tooltip/Tooltip";
+import { IMovie } from "../../interfaces/movie.interface";
 import CalendarIcon from "../iconsComponent/CalendarIcon";
+import ModalToFavs from "../iconsComponent/ModalToFavs";
 import PeopleIcon from "../iconsComponent/PeopleIcon";
 import HeartIcon from "../iconsComponent/HeartIcon";
 import useModal from "../../hooks/useModal";
 import "./infoMovie.css";
-import { BuyIcon } from "../iconsComponent/BuyIcon";
-import ModalToFavs from "../iconsComponent/ModalToFavs";
-import { Tooltip } from "../Tooltip/Tooltip";
 
 interface IModalProps {
   onClose: Function;

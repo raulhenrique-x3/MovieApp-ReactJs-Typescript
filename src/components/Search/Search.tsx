@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { IMovie } from "../../interfaces/movie.interface";
-import style from "../Search/search.module.scss";
-import axios from "axios";
-import "../Section01/section01.css";
 import { API_KEY } from "../../const/common";
+import { IMovie } from "../../interfaces/movie.interface";
 import MovieCard from "../MovieCard/MovieCard";
+import style from "../Search/search.module.scss";
+import "../Section01/section01.css";
+
+import axios from "axios";
 
 const Search = () => {
   const [searchParams] = useSearchParams();

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tooltip } from "../Tooltip/Tooltip";
 import { CartTrash } from "../iconsComponent/CartTrash";
+import { Tooltip } from "../Tooltip/Tooltip";
 import useCart from "../../hooks/useCart";
 
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
@@ -38,10 +38,9 @@ export const Cart = () => {
 
   return (
     <>
-      {" "}
       <div className="carInfo">
         <div className="firstCarCont">
-          <h2>Meu carrinho</h2>
+          <h2 className="myCart">Meu carrinho</h2>
           <p onClick={handleClearCart} className="empty">
             Esvaziar
           </p>
@@ -51,8 +50,8 @@ export const Cart = () => {
             <div className="cartItem" key={item.id}>
               <img alt={item.title} className="imgCart" src={API_IMG + item.img} />
               <p className="titleP">{item.title}</p>
-              <p>{item.qnt}</p>
-              <p>R${item.price}</p>
+              <p className="itemQnt">{item.qnt}</p>
+              <p className="itemValue">R${item.price}</p>
               <Tooltip direction="bottom" description="Remover do carrinho">
                 <CartTrash removeitemfromcart={() => removeItemFromCart(item.id)} />
               </Tooltip>

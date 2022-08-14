@@ -1,6 +1,6 @@
-import { Tooltip } from "../Tooltip/Tooltip";
 import { FavoritesTrash } from "../iconsComponent/FavoritesTrash";
 import { BuyFromFavs } from "../iconsComponent/BuyFromFavs";
+import { Tooltip } from "../Tooltip/Tooltip";
 import useFavorites from "../../hooks/useFavorites";
 import "../Header/header.css";
 
@@ -21,15 +21,17 @@ export const Favorites = () => {
   return (
     <div className="carInfo">
       <div className="firstCarCont">
-        <h2>Meus favoritos</h2>
-        <p onClick={handleClearFavorites}>Esvaziar</p>
+        <h2 className="myCart">Meus favoritos</h2>
+        <p onClick={handleClearFavorites} className="empty">
+          Esvaziar
+        </p>
       </div>
       <div className="cartProducts">
         {favorites?.map((item) => (
           <div className="cartItem" key={item.id}>
             <img alt={item.title} className="imgCart" src={API_IMG + item.img} />
             <p className="titleP">{item.title}</p>
-            <p>R${item.price}</p>
+            <p className="itemValue">R${item.price}</p>
             <Tooltip direction="bottom" description="Adicionar ao carrinho">
               <BuyFromFavs movie={item} />
             </Tooltip>

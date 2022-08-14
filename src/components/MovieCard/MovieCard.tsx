@@ -1,12 +1,12 @@
+import { ModalButton } from "../InfoMovie/ModalButton";
+import { formatDate } from "../../util/formatDate";
+import { InfoMovie } from "../InfoMovie/InfoMovie";
 import { useState } from "react";
 import { API_IMG } from "../../const/urls";
+import { IMovie } from "../../interfaces/movie.interface";
+import { Button } from "../Button/Button";
 import useFavorites from "../../hooks/useFavorites";
 import useModal from "../../hooks/useModal";
-import { IMovie } from "../../interfaces/movie.interface";
-import { formatDate } from "../../util/formatDate";
-import { Button } from "../Button/Button";
-import { InfoMovie } from "../InfoMovie/InfoMovie";
-import { ModalButton } from "../InfoMovie/ModalButton";
 
 interface IProps {
   movie: IMovie;
@@ -33,7 +33,7 @@ export default function MovieCard(props: IProps) {
       {showModal && <InfoMovie onClose={() => onClose(movie.id)} movie={movie} />}
       <div key={movie.id} className="figureMovie">
         <div className="movieImgRelease">
-          <div className="test">
+          <div className="iconsDiv">
             <span onClick={() => setShowModal(true)}>
               <ModalButton txt="Info" movieItem={movie} />
             </span>

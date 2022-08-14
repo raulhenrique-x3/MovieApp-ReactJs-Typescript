@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchIcon } from "../iconsComponent/SearchIcon";
+import { useState } from "react";
 
 export const SearchBar = () => {
   const navigate = useNavigate();
@@ -21,6 +21,7 @@ export const SearchBar = () => {
           value={searchItem}
           type={"text"}
           placeholder="Pesquisa"
+          className="inputWidth"
         ></input>
         <button type="submit" className="searchButton">
           <SearchIcon />

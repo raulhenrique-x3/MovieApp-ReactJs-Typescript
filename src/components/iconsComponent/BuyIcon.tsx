@@ -1,5 +1,5 @@
-import useCart from "../../hooks/useCart";
 import { IMovie } from "../../interfaces/movie.interface";
+import useCart from "../../hooks/useCart";
 
 interface IProps {
   movie: IMovie;

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Link } from "react-router-dom";
-import { Tooltip } from "../Tooltip/Tooltip";
 import { CartTrash } from "../iconsComponent/CartTrash";
+import { Tooltip } from "../Tooltip/Tooltip";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import * as yup from "yup";
 import "../Form/form.css";

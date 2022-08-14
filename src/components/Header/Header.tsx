@@ -1,13 +1,13 @@
+import { SearchBar } from "../SearchBar/SearchBar";
+import { Favorites } from "../Favorites/Favorites";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ShowFavs } from "../iconsComponent/ShowFavs";
 import { ShowCart } from "../iconsComponent/ShowCart";
-import useCart from "../../hooks/useCart";
-import useFavorites from "../../hooks/useFavorites";
-import "../Header/header.css";
-import { SearchBar } from "../SearchBar/SearchBar";
 import { Cart } from "../Cart/Cart";
-import { Favorites } from "../Favorites/Favorites";
+import { Link } from "react-router-dom";
+import useFavorites from "../../hooks/useFavorites";
+import useCart from "../../hooks/useCart";
+import "../Header/header.css";
 
 const Header = () => {
   // Gerenciamento de estado do carrinho
@@ -32,7 +32,7 @@ const Header = () => {
     <>
       <nav className="navHeader">
         <Link to={"/"}>
-          <h1>LOGO</h1>
+          <h1 className="logo">LOGO</h1>
         </Link>
         <SearchBar />
         <div className="headerIcons">
