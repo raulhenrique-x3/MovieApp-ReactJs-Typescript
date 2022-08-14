@@ -33,25 +33,28 @@ export default function MovieCard(props: IProps) {
       {showModal && <InfoMovie onClose={() => onClose(movie.id)} movie={movie} />}
       <div key={movie.id} className="figureMovie">
         <div className="movieImgRelease">
-          <span onClick={() => setShowModal(true)}>
-            <ModalButton txt="Info" movieItem={movie} />
-          </span>
-          <svg
-            onClick={() => handleAddFav(movie)}
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="currentColor"
-            className="heart-fill"
-            viewBox="0 0 16 16"
-          >
-            <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-          </svg>
+          <div className="test">
+            <span onClick={() => setShowModal(true)}>
+              <ModalButton txt="Info" movieItem={movie} />
+            </span>
+            <svg
+              onClick={() => handleAddFav(movie)}
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              className="heart-fill"
+              viewBox="0 0 16 16"
+            >
+              <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+            </svg>
+          </div>
+
           <img src={API_IMG + movie.poster_path} className="movieImg" alt={movie.title} />
-          <p>{formatDate(movie.release_date)}</p>
+          <p className="releaseDate">{formatDate(movie.release_date)}</p>
         </div>
         <div className="movieInfo">
-          <h4>{movie.title}</h4>
+          <h4 className="titleMovie">{movie.title}</h4>
           <div className="movieRate">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +69,7 @@ export default function MovieCard(props: IProps) {
             <p className="movieAvg">{movie.vote_average}</p>
             <p className="movieVote">Gênero</p>
           </div>
-          <p>R$79.99</p>
+          <p className="moviePrice">R$79.99</p>
         </div>
         <Button txt="Adicionar" movie={movie} />
       </div>

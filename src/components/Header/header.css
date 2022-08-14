@@ -107,7 +107,7 @@ input:focus {
 
 .carInfo {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background-color: #fff;
     display: flex;
     align-items: center;
