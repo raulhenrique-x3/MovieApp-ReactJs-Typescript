@@ -19,7 +19,6 @@ export default function MovieCard(props: IProps) {
   const onClose = (id: string) => {
     setShowModal(false);
     removeFromModal(id);
-    console.log(movie.id);
   };
 
   // Adiciona filmes aos favoritos:

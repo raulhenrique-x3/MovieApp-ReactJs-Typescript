@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    bottom: -29px;
 }
 
 .Modal {
@@ -110,25 +111,27 @@
 
 @media (min-width: 320px) and (max-width: 1190px) {
     .bgModal {
-        position: sticky;
+        position: fixed;
     }
 
     .modalTotalInfos {
         flex-direction: column;
+        overflow-x: auto;
     }
 
     .modalMovieInfo {
-        height: 75vh;
+        height: 70vh;
     }
 
     .movieInfos {
         width: 100%;
         gap: 8px;
         height: unset;
+        text-overflow: clip;
     }
 
     .movieTitle {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .movieDesc {
