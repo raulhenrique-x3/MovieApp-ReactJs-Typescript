@@ -16,6 +16,7 @@ export default function MovieCard(props: IProps) {
   const [showModal, setShowModal] = useState(false);
   const { movie } = props;
   const { removeFromModal } = useModal();
+
   const onClose = (id: string) => {
     setShowModal(false);
     removeFromModal(id);

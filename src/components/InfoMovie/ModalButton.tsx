@@ -5,8 +5,6 @@ export const ModalButton = (props: any) => {
   const { updateModal } = useModal();
 
   const showModalComp = () => {
-    console.log(props.movieItem);
-
     updateModal("view", {
       id: props.movieItem?.id,
       price: 79.99,

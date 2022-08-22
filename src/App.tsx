@@ -11,7 +11,7 @@ import routes from "./const/routes";
 import ModalProvider from "./context/modalContext";
 import { initialModal, modalReducer } from "./context/modalReducer";
 
-export default function App(props: any) {
+export default function App() {
   return (
     <ModalProvider reducer={modalReducer} initialState={initialModal}>
       <FavoritesProvider reducer={favoritesReducer} initialState={initialFavorites}>
